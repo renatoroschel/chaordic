@@ -24,16 +24,13 @@ for command in sqlCommands:
     try:
         c.execute(command)
     except OperationalError:
-        print ("Command skipped: ", command)
+        print ("Error: Command skipped: ", command)
 
 def do_insert(command):
     try:
-        if True:
-            print(command)
-
         c.execute(command)
     except OperationalError:
-        print ("Command skipped: ", command)
+        print ("Error: Command skipped: ", command)
 
 def rec_obj(input_obj, key_list):
 
@@ -202,7 +199,7 @@ unique_sequence = uniqueid()
 
 files_list = ['clicks','impressions','pageviews','transactions']
 
-files_list = ['transactions']
+#files_list = ['transactions']
 
 for file_i in files_list:
 
